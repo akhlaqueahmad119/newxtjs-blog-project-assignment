@@ -1,0 +1,89 @@
+/* /src/styles/TopDestinations.module.scss */
+.topDestinations {
+    padding: 0rem 1rem;
+    text-align: center;
+    margin: 0 auto;
+  
+    .heading {
+      font-size: 2rem;
+      margin-bottom: 0.5rem;
+      text-align: left;
+    }
+  
+    .subheading {
+      font-size: 1rem;
+      margin-bottom: 2rem;
+      margin-top: 0;
+      color: #555;
+      text-align: left;
+    }
+  
+    .grid {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1rem;
+      justify-content: center;
+    }
+  
+    .card {
+      position: relative;
+      flex: 1 1 calc(15% - 1rem);
+      margin: 0.1rem;
+      overflow: hidden;
+      aspect-ratio: 1/1;
+  
+      .image {
+        width: 400px;
+        height: 400px;
+        object-fit: cover;
+      }
+  
+      .overlay {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        top: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        background: rgba(0, 0, 0, 0.2);
+        color: #fff;
+        padding: 0.5rem;
+        text-align: center;
+  
+        .title {
+          font-size: 1rem;
+          margin: 1rem;
+        }
+      }
+    }
+  
+    @media (max-width: 768px) {
+        padding: 0;
+      .grid {
+        flex-direction: column;
+        gap: 0.5rem;
+      }
+  
+      .card {
+        flex: 1 1 100%;
+        .image {
+            width: 600px;
+            height: 600px;
+            object-fit: cover;
+          }
+      }
+    }
+
+    @media (max-width: 500px) {
+      .card {
+        .image {
+            height: 400px;
+            height: 400px;
+          }
+      }
+    }
+
+  }
+  

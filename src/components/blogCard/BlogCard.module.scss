@@ -1,0 +1,169 @@
+.blogCard {
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  overflow: hidden;
+  background-color: white;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  transition: transform 0.2s;
+  width: 31%;
+  margin-bottom: 2rem;
+
+  &:hover {
+    transform: translateY(-5px);
+  }
+
+  .imageWrapper {
+    position: relative;
+
+    .image {
+      width: 100%;
+      height: auto;
+    }
+
+    .badges {
+      position: absolute;
+      top: 8px;
+      left: 8px;
+
+      .badge {
+        background-color: #ffffff33;
+        color: white;
+        padding: 4px 8px;
+        margin-right: 4px;
+        border-radius: 4px;
+        font-size: 0.75rem;
+      }
+    }
+
+    .icon {
+      position: absolute;
+      top: 8px;
+      right: 8px;
+      background-color: #00000033;
+      border-radius: 50%;
+      padding: 6px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      svg {
+        color: white;
+        height: 15px;
+        width: 15px;
+      }
+    }
+  }
+
+  .title {
+    font-size: 1.25rem;
+    margin: 0.5rem 1rem;
+  }
+
+  .meta {
+    display: flex;
+    align-items: center;
+    margin: 0.5rem 1rem;
+    gap: 4px;
+
+    .authorImage {
+      width: 24px;
+      height: 24px;
+      border-radius: 50%;
+      margin-right: 8px;
+    }
+
+    .authorName {
+      font-weight: bold;
+      margin-right: 8px;
+      width: 100%;
+    }
+
+    .date {
+      color: #666;
+      font-size: 0.875rem;
+      margin-right: 8px;
+      width: 100%;
+    }
+    .shares {
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+      color: #666;
+      font-size: 0.875rem;
+      margin-right: 8px;
+      width: 100%;
+    }
+  }
+
+  .description {
+    margin: 0 1rem 1rem 1rem;
+    color: #666;
+    font-size: 0.875rem;
+  }
+
+  .viewPost {
+    display: block;
+    margin: 0 1rem 1rem 1rem;
+    color: #0070f3;
+    text-decoration: none;
+    font-weight: bold;
+
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+
+  @media (max-width: 768px) {
+    width: 90%;
+    margin-bottom: 1rem;
+    .viewPost {
+      text-align: end;
+    }
+    .meta {
+      display: flex;
+
+      align-items: center;
+      justify-content: space-between;
+      margin: 0.5rem 1rem;
+      gap: 4px;
+
+      .authorImage {
+        width: 24px;
+        height: 24px;
+        border-radius: 50%;
+        margin-right: 8px;
+      }
+
+      .authorName {
+        font-weight: bold;
+        margin-right: 8px;
+        width: 100%;
+        font-size: 0.9rem;
+      }
+      .dateShare {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        text-align: end;
+        gap: 0.25rem;
+      }
+      .date {
+        color: #666;
+        font-size: 0.7rem;
+        margin-right: 8px;
+        width: 100%;
+      }
+      .shares {
+        display: flex;
+        flex-direction: row-reverse;
+        align-items: center;
+        gap: 0.5rem;
+        color: #666;
+        text-align: end;
+        font-size: 0.7rem;
+        margin-right: 8px;
+        width: 100%;
+        justify-content: flex-start;
+      }
+    }
+  }
+}
